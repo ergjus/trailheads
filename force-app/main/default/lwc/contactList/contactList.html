@@ -1,5 +1,9 @@
+<!-- sldsValidatorIgnore -->
 <template>
     <lightning-card>
+        <template if:true={errors}>
+           <p> {errors}</p>
+        </template>
         <template if:true={contacts.data}>
             <lightning-datatable
                 key-field="Id"
